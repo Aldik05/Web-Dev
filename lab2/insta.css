@@ -1,168 +1,175 @@
-.phone-some{
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+
+#main-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    min-height: 100vh;
+}
+
+#left-side {
+    position: relative;
+}
+
+.phone-some {
     width: 468px;
     height: 580px;
 }
-.gif-some{
-    height:505px;
-    width:250px;
+
+.gif-some {
+    height: 495px; /* Сделал немного меньше, чтобы хорошо вписывался */
+    width: 250px;
     border-radius: 30px;
-    position: relative;
-    bottom:55px;
-    right:315px;
+    
+    position: absolute;
+    top: 46%; /* Размещаем по центру относительно родительского контейнера */
+    left: 60%;
+    transform: translate(-50%, -50%); /* Центрируем по оси X и Y */
 }
-#left-side{
-    float:left;
-    position:relative;
-    top:25px;
-    left:300px;
-}
-#right-side{
-    float:right;
-    position:relative;
-    top:39px;
-    right:365px;
-}
-.login{
+
+
+#right-side {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-     display: flex;
-     flex-direction: column;
 }
-.some-border{
-    border:1px solid #d3d2d2;
-    margin-top:10px;
-    padding:20px;
+
+.some-border {
+    border: 1px solid #d3d2d2;
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
 }
-.input-group{
-    border-radius: 5px;
-    height: 36px;
-    width: 260px;
-    font-size:15px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom:10px;
-    border:1px solid grey;
-}
-.input-group::placeholder{
-    font-size:13px;
-    text-align: left;;
-}
-.join-button{
-    background-color:#0064e0;
-    border-radius: 5px;
-    width:270px;
-    height: 30px;
-    margin-bottom:10px;
-    border:none;
-    
-}
-.qwerty{
-    color:white;
-}
-#logo{
-    width:200px;
-    height: auto;
-    
-}
-.img-logo{
-    margin-left:39px;
+
+.img-logo {
+    text-align: center;
     margin-bottom: 25px;
 }
 
-.___label{
-    border-bottom: 1px solid #dadde1;
-    margin: 20px 10px;
-    flex-grow: 1;
-    position: relative;
-    bottom: 10px;
-  
+#logo {
+    width: 200px;
+    height: auto;
 }
-.or{
- display: flex;
-    flex-direction: row;
-}
-#facebook-logo{
-    height: 20px;
-    position: relative;
-   top: 5px;
-   border-radius: 8px;
-   
-}
-.link-settings{
-    color:blue;
-    text-decoration: none;
-    text-align: center;
-    font-size:15px;
-    margin-bottom: 10px;
-   
-}
-.forgot-link{
-    font-size:13px;
-    color:blue;
-    text-decoration: none;
-    text-align: center;
-    margin-bottom: 10px;
 
-}
-.forgot{
-    position: relative;
-    left:120px;
-}
-.facebook{
+.login {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    position: relative;
-    left:80px;
+}
+
+.input-group {
+    border-radius: 5px;
+    height: 36px;
+    width: 260px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+.input-group::placeholder {
+    font-size: 13px;
+}
+
+.join-button {
+    background-color: #0064e0;
+    border-radius: 5px;
+    width: 270px;
+    height: 30px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.qwerty {
+    color: white;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #dadde1;
+    margin: 0 10px;
+}
+
+.facebook {
+    text-align: center;
     margin-bottom: 15px;
 }
-.create{
-    display: flex;
-    flex-direction: row;
-    padding:14px;
-}
-#beknur{
-    margin-right:5px;
-}
-.download-app{
-    display:flex;
-    align-items: center;
-    position:relative;
-    left:77px;
-    font-size:15px;
-}
-.apple{
-    height: auto;
-    width:135px;
-}
-.apps{
-    align-items: center;
-    position:relative;
-    left:55px;
+
+#facebook-logo {
+    height: 20px;
+    border-radius: 8px;
+    vertical-align: middle;
 }
 
-.footer-1{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    right : 500px;
-    top : 12px;
-    text-align: center;
-}
-
-.footer-2{
-    position: relative;
-    top : 12px;
-    right: 23px;
-}
-
-.href-1{
-    margin: 10px;
+.link-settings {
+    color: blue;
     text-decoration: none;
-    text-align: center;
-    font-size: 12px;
-    white-space: nowrap;
-    color: black;
+    font-size: 15px;
 }
 
-footer{
-    position: relative;
-    top: 700px;
-    right: 100px;
+.forgot-link {
+    font-size: 13px;
+    color: blue;
+    text-decoration: none;
+}
+
+.create {
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+}
+
+.download-app {
+    text-align: center;
+    font-size: 15px;
+}
+
+.apps {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.app-icon {
+    width: 135px;
+    height: auto;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-1, .footer-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.href-1 {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
 }
